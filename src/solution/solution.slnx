@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/MVC/">
+    <Project Path="Custom_Tournaments/Custom_Tournaments.Domain.csproj" />
+    <Project Path="Custom_Tournaments_Infrastructure/Custom_Tournaments_Infrastructure.csproj" />
+  </Folder>
+</Solution>
