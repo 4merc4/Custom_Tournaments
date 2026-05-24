@@ -1,0 +1,249 @@
+﻿@model Custom_Tournaments.Domain.Model.Team
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="page-hero">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a asp-controller="Teams" asp-action="Index" class="text-muted">Команди</a></li>
+                <li class="breadcrumb-item active">@Model.Name</li>
+            </ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                @if (!string.IsNullOrEmpty(Model.Logourl))
+                {
+                    <img src="@Model.Logourl" alt="@Model.Name"
+                         style="width:60px;height:60px;object-fit:cover;border-radius:12px;" />
+                }
+                else
+                {
+                    <div style="width:60px;height:60px;background:var(--ct-border);border-radius:12px;
+                        display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:var(--ct-muted);">
+                        <i class="bi bi-shield"></i>
+                    </div>
+                }
+                <div>
+                    <h2 class="fw-bold mb-0">@Model.Name</h2>
+                    <small class="text-muted">Власник: @Model.Owner?.Username</small>
+                </div>
+            </div>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <div class="d-flex gap-2">
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-pencil me-1"></i>Редагувати
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger btn-sm">
+                        <i class="bi bi-trash me-1"></i>Видалити
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row g-4">
+        @* Склад команди *@
+        <div class="col-lg-5">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-people me-2"></i>Склад команди</span>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <button class="btn btn-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#addMemberPanel">
+                            <i class="bi bi-person-plus me-1"></i>Додати
+                        </button>
+                    }
+                </div>
+
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <div class="collapse" id="addMemberPanel">
+                        <div class="card-body border-bottom" style="background-color: rgba(108,99,255,0.05)">
+                            <form asp-action="AddMember" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="teamId" value="@Model.Id" />
+                                <div class="mb-2">
+                                    <label class="form-label small text-muted">Користувач</label>
+                                    <select name="userId" class="form-select">
+                                        @if (ViewBag.AvailableUsers != null)
+                                        {
+                                            foreach (Microsoft.AspNetCore.Mvc.Rendering.SelectListItem item in ViewBag.AvailableUsers)
+                                            {
+                                                <option value="@item.Value">@item.Text</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label small text-muted">Роль</label>
+                                    <input type="text" name="role" class="form-control" placeholder="Player" />
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm w-100">Додати учасника</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+
+                <div class="card-body p-0">
+                    @if (!Model.Teammembers.Any())
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="bi bi-person-x fs-2 d-block mb-2"></i>
+                            <small>В команді ще немає учасників</small>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="list-group list-group-flush">
+                            @foreach (var member in Model.Teammembers)
+                            {
+                                <div class="list-group-item" style="background:transparent;border-color:var(--ct-border);">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <div class="fw-semibold">@member.User?.Username</div>
+                                            <small class="text-muted">
+                                                <span class="badge-game">@member.Role</span>
+                                                <span class="ms-2">з @member.Joinedat?.ToString("dd.MM.yyyy")</span>
+                                            </small>
+                                        </div>
+                                        @if (User.Identity?.IsAuthenticated == true)
+                                        {
+                                            <form asp-action="RemoveMember" method="post" class="d-inline">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="teamId" value="@Model.Id" />
+                                                <input type="hidden" name="memberId" value="@member.Id" />
+                                                <button type="submit" class="btn btn-outline-danger btn-sm"
+                                                        onclick="return confirm('Видалити учасника?')">
+                                                    <i class="bi bi-x"></i>
+                                                </button>
+                                            </form>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            @* Турніри команди *@
+            @if (Model.Tournamentparticipants.Any())
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <i class="bi bi-trophy me-2"></i>Турніри команди
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush">
+                            @foreach (var participant in Model.Tournamentparticipants)
+                            {
+                                <a asp-controller="Tournaments" asp-action="Details"
+                                       asp-route-id="@participant.Tournament?.Id"
+                                       class="list-group-item list-group-item-action"
+                                       style="background:transparent;border-color:var(--ct-border);color:var(--ct-text);">
+                                    <i class="bi bi-trophy me-2 text-warning"></i>@participant.Tournament?.Title
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @* Історія матчів *@
+        <div class="col-lg-7">
+            <div class="card">
+                <div class="card-header">
+                    <i class="bi bi-clock-history me-2"></i>Історія матчів
+                </div>
+                <div class="card-body p-0">
+                    @if (!Model.Teammatchresults.Any())
+                    {
+                        <div class="text-center py-4 text-muted">
+                            <i class="bi bi-calendar-x fs-2 d-block mb-2"></i>
+                            <small>Матчів ще немає</small>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr style="border-color:var(--ct-border);">
+                                        <th class="text-muted small fw-normal ps-3">Гра</th>
+                                        <th class="text-muted small fw-normal">Рахунок</th>
+                                        <th class="text-muted small fw-normal">Результат</th>
+                                        <th class="text-muted small fw-normal">Статус</th>
+                                        <th class="text-muted small fw-normal">Дата</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var match in Model.Teammatchresults.OrderByDescending(m => m.Playedat))
+                                    {
+                                        <tr style="border-color:var(--ct-border);">
+                                            <td class="ps-3">
+                                                @* Клікабельно тільки якщо матч завершений *@
+                                                @if (match.Status == "finished")
+                                                {
+                                                    <a asp-controller="Teammatchresults" asp-action="Details"
+                                                           asp-route-id="@match.Id"
+                                                           class="text-decoration-none" style="color: var(--ct-accent);">
+                                                        @match.Gamename
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <small>@match.Gamename</small>
+                                                }
+                                            </td>
+                                            <td><small class="fw-semibold">@match.Score</small></td>
+                                            <td>
+                                                @if (match.Result?.ToLower() is "win" or "перемога")
+                                                {
+                                                    <span class="badge-public">Перемога</span>
+                                                }
+                                                else if (match.Result?.ToLower() is "loss" or "поразка")
+                                                {
+                                                    <span class="badge-private">Поразка</span>
+                                                }
+                                                else if (match.Result?.ToLower() is "draw" or "нічия")
+                                                {
+                                                    <span class="badge-planned">Нічия</span>
+                                                }
+                                                else if (!string.IsNullOrEmpty(match.Result))
+                                                {
+                                                    <span class="badge-game">@match.Result</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                @if (match.Status == "planned")
+                                                {
+                                                    <span class="badge-planned">Заплановано</span>
+                                                }
+                                                else if (match.Status == "ongoing")
+                                                {
+                                                    <span class="badge-ongoing">Триває</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge-finished">Завершено</span>
+                                                }
+                                            </td>
+                                            <td><small class="text-muted">@match.Playedat?.ToString("dd.MM.yy")</small></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

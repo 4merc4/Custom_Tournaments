@@ -3,44 +3,208 @@
   "WorkspaceRootPath": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\tournamentadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\tournamentadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\tournamentparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\tournamentparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournamentadmin\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournamentadmin\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\teammatchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\teammatchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournaments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournaments\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournaments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournaments\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammatchresults\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammatchresults\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammembers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammembers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teams\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teams\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournamentparticipants\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournamentparticipants\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\custom_tournaments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\custom_tournaments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\tournamentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\tournamentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournaments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournaments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\custom_tournaments_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\custom_tournaments_context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\tournamentparticipantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\tournamentparticipantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\matchparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\matchparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\tournamentparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\tournamentparticipant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\tournamentmatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\tournamentmatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\teammatchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\teammatchresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\teammember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\tournament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournaments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournaments\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\identitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\identitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammatchresults\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammatchresults\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammatchresults\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammatchresults\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammatchresults\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammatchresults\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammatchresults\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammatchresults\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teams\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teams\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\custom_tournaments_infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\custom_tournaments_infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\custom_tournaments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\custom_tournaments.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teams\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teams\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teams\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teams\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournamentparticipants\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournamentparticipants\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teammembers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teammembers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\tournaments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\tournaments\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\views\\teams\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\views\\teams\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments\\model\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA6A0AC5-77E1-6311-3C7F-726E76A22132}|Custom_Tournaments\\Custom_Tournaments.Domain.csproj|solutionrelative:custom_tournaments\\model\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\teammemberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\teammemberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|c:\\users\\afoki\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\custom_tournaments_infrastructure\\controllers\\teammatchresultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE03ED8B-953E-AADB-E5EE-928BBFFBA0F8}|Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj|solutionrelative:custom_tournaments_infrastructure\\controllers\\teammatchresultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,126 +214,618 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Edit.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-12T08:38:20.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Edit.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-12T08:37:47.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\TournamentAdmin\\Manage.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\TournamentAdmin\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\TournamentAdmin\\Manage.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\TournamentAdmin\\Manage.cshtml",
+              "ViewState": "AgIAALcBAAAAAAAAAAAkwMcBAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-10T11:26:47.438Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TournamentAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TournamentAdminController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\TournamentAdminController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TournamentAdminController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\TournamentAdminController.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAswPAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T11:25:42.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Matchparticipant.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Matchparticipant.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Matchparticipant.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Matchparticipant.cs",
+              "RelativeToolTip": "Custom_Tournaments\\Model\\Matchparticipant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T11:23:41.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Tournamentmatch.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Tournamentmatch.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Tournamentmatch.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Tournamentmatch.cs",
+              "RelativeToolTip": "Custom_Tournaments\\Model\\Tournamentmatch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T11:23:21.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Edit.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Edit.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAABgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T21:09:25.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Index.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Index.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Index.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Index.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T21:06:24.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Delete.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Delete.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T21:05:50.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Details.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Details.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Details.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Details.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAYwJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T20:54:41.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T20:51:06.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-09T20:50:41.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T20:47:18.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T20:47:00.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAuwGQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T20:44:15.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IdentityContext.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\IdentityContext.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\IdentityContext.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\IdentityContext.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\IdentityContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T20:25:56.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\AppUser.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\AppUser.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\AppUser.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T20:25:23.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T15:36:30.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Create.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Create.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournamentparticipants\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T15:29:36.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Create.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammembers\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T15:29:28.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Create.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Create.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teammatchresults\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T15:25:36.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Delete.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Delete.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:59:45.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Delete.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Delete.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:59:05.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Edit.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Edit.cshtml",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAUwN0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:58:35.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Edit.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:57:46.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Create.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Create.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Create.cshtml",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAIwOkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:57:32.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Create.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Create.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Create.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Create.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAGBnwC0AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:57:04.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Details.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Details.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Details.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Details.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAwwEwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:55:39.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Details.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Details.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Details.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Details.cshtml",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAYwPkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:55:21.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Index.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Index.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Teams\\Index.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Teams\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:53:45.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Index.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Index.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Index.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Tournaments\\Index.cshtml",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAqwKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:48:23.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T14:47:16.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADwBAAAAAAAAAAAYwFcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-05T13:30:28.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TournamentparticipantsController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TournamentparticipantsController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\TournamentparticipantsController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TournamentparticipantsController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\TournamentparticipantsController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:28:53.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TeammembersController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TeammembersController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\TeammembersController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TeammembersController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\TeammembersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:28:23.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TeammatchresultsController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TeammatchresultsController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\TeammatchresultsController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TeammatchresultsController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\TeammatchresultsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:27:47.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TeamsController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TeamsController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\TeamsController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TeamsController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\TeamsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAOMAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T13:27:17.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAOBvwCAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-05T13:04:43.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TournamentsController.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TournamentsController.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Controllers\\TournamentsController.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Controllers\\TournamentsController.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Controllers\\TournamentsController.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAwwFsBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T12:55:14.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Program.cs",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Program.cs",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T12:47:58.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\appsettings.json",
+              "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\appsettings.json",
+              "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\appsettings.json",
+              "RelativeToolTip": "Custom_Tournaments_Infrastructure\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-05T12:36:03.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\User.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\User.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\User.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T10:08:09.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-15T10:08:09.204Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
               "Title": "Tournamentparticipant.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Tournamentparticipant.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Tournamentparticipant.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Tournamentparticipant.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\Tournamentparticipant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T10:07:59.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 22,
               "Title": "Tournament.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Tournament.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Tournament.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Tournament.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\Tournament.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAABQwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T10:07:44.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 21,
               "Title": "Teammember.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Teammember.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Teammember.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Teammember.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\Teammember.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T10:07:37.483Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 20,
               "Title": "Teammatchresult.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Teammatchresult.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Teammatchresult.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Teammatchresult.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\Teammatchresult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T10:06:45.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 47,
               "Title": "Entity.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Entity.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Entity.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Entity.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T10:04:29.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "Custom_Tournaments_Context.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Custom_Tournaments_Context.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Custom_Tournaments_Context.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Custom_Tournaments_Context.cs",
               "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Custom_Tournaments_Context.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAYwLIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T09:57:35.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 23,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Team.cs",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Model\\Team.cs",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Model\\Team.cs",
               "RelativeToolTip": "Custom_Tournaments\\Model\\Team.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCAAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T09:49:34.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 38,
               "Title": "Custom_Tournaments_Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj",
               "RelativeDocumentMoniker": "Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj",
               "RelativeToolTip": "Custom_Tournaments_Infrastructure\\Custom_Tournaments_Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-03-15T09:13:13.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Custom_Tournaments.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Custom_Tournaments.Domain.csproj",
               "RelativeDocumentMoniker": "Custom_Tournaments\\Custom_Tournaments.Domain.csproj",
               "ToolTip": "C:\\Users\\afoki\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\custom tournaments\\src\\solution\\Custom_Tournaments\\Custom_Tournaments.Domain.csproj",
               "RelativeToolTip": "Custom_Tournaments\\Custom_Tournaments.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-03-15T08:58:36.765Z"
             }

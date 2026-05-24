@@ -1,25 +1,29 @@
-using Custom_Tournaments_Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using Custom_Tournaments_Infrastructure;
 
 namespace Custom_Tournaments_Infrastructure.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly Custom_Tournaments_Context _context;
+
+        public HomeController(Custom_Tournaments_Context context)
         {
-            return View();
+            _context = context;
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Index()
         {
-            return View();
-        }
+            var tournaments = await _context.Tournaments
+                .Include(t => t.Organizer)
+                .Include(t => t.Tournamentparticipants)
+                .Where(t => t.Isprivate == false || t.Isprivate == null)
+                .OrderByDescending(t => t.Createdat)
+                .Take(6)
+                .ToListAsync();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(tournaments);
         }
     }
 }

@@ -1,0 +1,62 @@
+﻿@model Custom_Tournaments_Infrastructure.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Вхід";
+}
+
+<div class="page-hero">
+    <div class="container">
+        <h2 class="fw-bold mb-0"><i class="bi bi-box-arrow-in-right me-2"></i>Вхід</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card">
+                <div class="card-body p-4">
+                    <form asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Email</label>
+                            <input asp-for="Email" class="form-control" placeholder="email@example.com" />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label">Пароль</label>
+                            <input asp-for="Password" class="form-control" type="password" placeholder="Ваш пароль" />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-check">
+                                <input asp-for="RememberMe" class="form-check-input" type="checkbox" />
+                                <label asp-for="RememberMe" class="form-check-label">Запам'ятати мене</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-box-arrow-in-right me-1"></i>Увійти
+                        </button>
+
+                        <div class="text-center mt-3">
+                            <small style="color: var(--ct-muted);">
+                                Немає акаунту?
+                                <a asp-action="Register" style="color: var(--ct-accent);">Зареєструватися</a>
+                            </small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

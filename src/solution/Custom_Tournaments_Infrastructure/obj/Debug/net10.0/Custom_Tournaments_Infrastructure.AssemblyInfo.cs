@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Custom_Tournaments_Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f06c8aa8f9fd352b1509794ac2ef54f11da8251")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc9a8b4cb200daf6787c31327cc3a07521b2087f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Custom_Tournaments_Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Custom_Tournaments_Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

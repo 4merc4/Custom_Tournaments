@@ -1,0 +1,630 @@
+﻿@model Custom_Tournaments.Domain.Model.Tournament
+
+@{
+    ViewData["Title"] = $"Управління: {Model.Title}";
+    bool isPending = Model.Status == "pending";
+    bool isActive = Model.Status == "active";
+    bool isFinished = Model.Status == "finished";
+    bool isBattleRoyal = Model.Format == "battleroyal";
+
+    string formatLabel = Model.Format switch
+    {
+        "elimination" => "Олімпійська",
+        "roundrobin" => "Кругова",
+        "battleroyal" => "Королівська битва",
+        _ => Model.Format
+    };
+
+    int currentRound = Model.Tournamentmatches.Any() ? Model.Tournamentmatches.Max(m => m.Round) : 0;
+    var currentMatches = Model.Tournamentmatches.Where(m => m.Round == currentRound).ToList();
+    bool allCurrentFinished = currentMatches.Any() && currentMatches.All(m => m.Status == "finished");
+    var activeTeams = Model.Tournamentparticipants.Where(tp => !tp.IsEliminated).ToList();
+    bool maxRoundsReached = currentRound >= Model.MaxRounds;
+
+    HashSet<int> GetEliminatedPlayerIds(Custom_Tournaments.Domain.Model.Tournamentmatch match)
+    {
+        var result = new HashSet<int>();
+        var notes = match.Notes ?? "";
+        var tag = "eliminated_players:";
+        if (!notes.Contains(tag)) return result;
+        var start = notes.IndexOf(tag) + tag.Length;
+        var end = notes.IndexOf(";", start);
+        var idsStr = end > start ? notes.Substring(start, end - start) : notes.Substring(start);
+        foreach (var idStr in idsStr.Split(',', StringSplitOptions.RemoveEmptyEntries))
+            if (int.TryParse(idStr, out var id)) result.Add(id);
+        return result;
+    }
+}
+
+<div class="page-hero">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a asp-controller="Tournaments" asp-action="Index" class="text-muted">Турніри</a></li>
+                <li class="breadcrumb-item"><a asp-controller="Tournaments" asp-action="Details" asp-route-id="@Model.Id" class="text-muted">@Model.Title</a></li>
+                <li class="breadcrumb-item active">Управління</li>
+            </ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+            <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <h2 class="fw-bold mb-0">@Model.Title</h2>
+                    @if (isPending)
+                    {
+                        <span class="badge-planned">Очікує старту</span>
+                    }
+                    else if (isActive)
+                    {
+
+                        <span class="badge-ongoing">Активний</span>
+                    }
+                    else
+                    {
+
+                        <span class="badge-finished">Завершений</span>
+                    }
+                </div>
+                <small class="text-muted">
+                    @formatLabel
+                    @if (!string.IsNullOrEmpty(Model.Gamename))
+                    {
+                        <span class="ms-2 badge-game"><i class="bi bi-controller me-1"></i>@Model.Gamename</span>
+                    }
+                    @if (Model.ScoringEnabled && !isBattleRoyal)
+                    {
+                        <span class="ms-2 badge-game"><i class="bi bi-star me-1"></i>Балова система</span>
+                    }
+                </small>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+                @if (isPending)
+                {
+                    <form asp-action="Start" asp-route-id="@Model.Id" method="post">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-primary" onclick="return confirm('Розпочати турнір?')">
+                            <i class="bi bi-play-fill me-1"></i>Розпочати турнір
+                        </button>
+                    </form>
+                }
+                @if (isActive)
+                {
+                    @if (allCurrentFinished && activeTeams.Count > 1 && !maxRoundsReached)
+                    {
+                        <form asp-action="GenerateNextRound" asp-route-id="@Model.Id" method="post">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-outline-primary">
+                                <i class="bi bi-arrow-right-circle me-1"></i>Наступний раунд
+                                <small class="ms-1 opacity-75">(@currentRound/@Model.MaxRounds)</small>
+                            </button>
+                        </form>
+                    }
+                    @if (allCurrentFinished && maxRoundsReached)
+                    {
+                        <span class="btn btn-outline-secondary disabled">Всі раунди завершено (@Model.MaxRounds/@Model.MaxRounds)</span>
+                    }
+                    <form asp-action="Finish" asp-route-id="@Model.Id" method="post">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Завершити турнір?')">
+                            <i class="bi bi-flag-fill me-1"></i>Завершити турнір
+                        </button>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["Error"] != null)
+{
+    <div class="container mb-3"><div class="alert alert-danger">@TempData["Error"]</div></div>
+}
+@if (TempData["Info"] != null)
+{
+    <div class="container mb-3">
+        <div class="alert alert-info" style="background:rgba(108,99,255,0.1);border-color:var(--ct-accent);color:var(--ct-text);">@TempData["Info"]</div>
+    </div>
+}
+
+<div class="container">
+    <div class="row g-4">
+
+        <div class="col-lg-4">
+            @if (isActive)
+            {
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-stopwatch me-2"></i>Секундомір / Таймер</div>
+                    <div class="card-body text-center">
+                        <div id="stopwatchDisplay" style="font-size:2.5rem;font-weight:700;font-variant-numeric:tabular-nums;color:var(--ct-accent);letter-spacing:2px;">00:00:00</div>
+                        <div class="d-flex gap-2 justify-content-center mt-3">
+                            <button class="btn btn-primary btn-sm" onclick="startStopwatch()"><i class="bi bi-play-fill"></i> Старт</button>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="stopStopwatch()"><i class="bi bi-pause-fill"></i> Пауза</button>
+                            <button class="btn btn-outline-danger btn-sm" onclick="resetStopwatch()"><i class="bi bi-arrow-counterclockwise"></i> Скинути</button>
+                        </div>
+                        <hr style="border-color:var(--ct-border);" />
+                        <div class="text-muted small mb-2">Таймер (зворотній відлік)</div>
+                        <div class="input-group mb-2" style="max-width:200px;margin:0 auto;">
+                            <input type="number" id="timerMinutes" class="form-control form-control-sm text-center" placeholder="хв" min="1" max="999" value="5" />
+                            <span class="input-group-text" style="background:var(--ct-border);border-color:var(--ct-border);color:var(--ct-text);">хв</span>
+                        </div>
+                        <div id="timerDisplay" style="font-size:1.8rem;font-weight:700;font-variant-numeric:tabular-nums;color:#ffc107;letter-spacing:2px;">05:00</div>
+                        <div class="d-flex gap-2 justify-content-center mt-2">
+                            <button class="btn btn-warning btn-sm" onclick="startTimer()" style="color:#000;"><i class="bi bi-play-fill"></i> Старт</button>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="stopTimer()"><i class="bi bi-pause-fill"></i> Пауза</button>
+                            <button class="btn btn-outline-danger btn-sm" onclick="resetTimer()"><i class="bi bi-arrow-counterclockwise"></i></button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div class="card">
+                <div class="card-header"><i class="bi bi-people me-2"></i>Команди (@Model.Tournamentparticipants.Count)</div>
+                <div class="card-body p-0">
+                    @foreach (var participant in Model.Tournamentparticipants.OrderBy(tp => tp.IsEliminated))
+                    {
+                        var team = participant.Team;
+                        bool tournamentEliminated = participant.IsEliminated;
+                        <div style="border-bottom:1px solid var(--ct-border);">
+                            <div class="p-3 d-flex justify-content-between align-items-center"
+                                 style="@(tournamentEliminated ? "opacity:0.45;filter:grayscale(0.7);" : "")">
+                                <div class="d-flex align-items-center gap-2 flex-grow-1">
+                                    @if (!string.IsNullOrEmpty(team?.Logourl))
+                                    {
+                                        <img src="@team.Logourl" class="team-logo" alt="@team.Name" />
+                                    }
+                                    else
+                                    {
+
+                                        <div class="team-logo-placeholder"><i class="bi bi-shield"></i></div>
+                                    }
+                                    <div class="flex-grow-1">
+                                        <div class="fw-semibold" style="color:var(--ct-text);">
+                                            @if (tournamentEliminated)
+                                            {
+                                                <span>💀</span>
+                                            }
+                                            @team?.Name
+                                        </div>
+                                        @if (tournamentEliminated && participant.EliminatedAt.HasValue)
+                                        {
+                                            <small class="text-muted">Виключено @participant.EliminatedAt.Value.ToString("dd.MM HH:mm")</small>
+                                        }
+                                        @if (participant.FinalPlace.HasValue)
+                                        {
+                                            <small class="text-muted">Місце: #@participant.FinalPlace</small>
+                                        }
+                                    </div>
+                                </div>
+                                @if (isActive)
+                                {
+                                    <div class="d-flex gap-1 align-items-center">
+                                        @if (!tournamentEliminated && team?.Teammembers != null && team.Teammembers.Any())
+                                        {
+                                            <button class="btn btn-outline-secondary btn-sm" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#players_@team.Id" title="Список гравців">
+                                                ↧
+                                            </button>
+                                        }
+                                        @if (!tournamentEliminated)
+                                        {
+                                            <button class="btn btn-outline-danger btn-sm" title="Виключити з турніру назавжди"
+                                                    onclick="doAction('/TournamentAdmin/EliminateTeam?tournamentId=@Model.Id&teamId=@team!.Id', 'Виключити команду з турніру назавжди?')">
+                                                💀
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-outline-success btn-sm" title="Відновити команду"
+                                                    onclick="doAction('/TournamentAdmin/RestoreTeam?tournamentId=@Model.Id&teamId=@team!.Id')">
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                }
+                            </div>
+
+                            @if (isActive && team?.Teammembers != null && team.Teammembers.Any() && !tournamentEliminated)
+                            {
+                                var activeMatch = Model.Tournamentmatches
+                                    .Where(m => m.Status == "active")
+                                    .FirstOrDefault(m => m.Matchparticipants.Any(mp => mp.Teamid == team.Id));
+
+                                <div class="collapse" id="players_@team.Id">
+                                    <div class="px-3 pb-2" style="background:rgba(108,99,255,0.05);">
+                                        <div class="text-muted small mb-2 pt-2"><i class="bi bi-person me-1"></i>Гравці:</div>
+                                        @foreach (var member in team.Teammembers)
+                                        {
+                                            bool playerElim = activeMatch != null && GetEliminatedPlayerIds(activeMatch).Contains(member.Id);
+                                            <div class="d-flex align-items-center gap-2 py-1" style="@(playerElim ? "opacity:0.5;" : "")">
+                                                <span class="flex-grow-1 small" style="color:var(--ct-text);">
+                                                    @if (playerElim)
+                                                    {
+                                                        <span>💀</span>
+                                                    }
+                                                    @member.User?.Username
+                                                    @if (!string.IsNullOrEmpty(member.Role))
+                                                    {
+                                                        <span class="text-muted"> (@member.Role)</span>
+                                                    }
+                                                </span>
+                                                @if (activeMatch != null)
+                                                {
+                                                    @if (!playerElim)
+                                                    {
+                                                        <button class="btn btn-outline-warning btn-sm py-0 px-1" style="font-size:0.7rem;"
+                                                                onclick="doAction('/TournamentAdmin/EliminatePlayer?tournamentId=@Model.Id&matchId=@activeMatch.Id&memberId=@member.Id&eliminated=true', 'Вибути гравця з матчу?')">
+                                                            💀 матч
+                                                        </button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button class="btn btn-outline-success btn-sm py-0 px-1" style="font-size:0.7rem;"
+                                                                onclick="doAction('/TournamentAdmin/EliminatePlayer?tournamentId=@Model.Id&matchId=@activeMatch.Id&memberId=@member.Id&eliminated=false')">
+                                                            ↩
+                                                        </button>
+                                                    }
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+
+            @if (Model.ScoringEnabled && !isBattleRoyal && Model.Tournamentmatches.Any())
+            {
+                <div class="card mt-4">
+                    <div class="card-header"><i class="bi bi-star me-2"></i>Балова таблиця</div>
+                    <div class="card-body p-0">
+                        @{
+                            var scoreboard = Model.Tournamentparticipants
+                                .Select(tp => new
+                                {
+                                    Team = tp.Team,
+                                    TotalPoints = Model.Tournamentmatches.SelectMany(m => m.Matchparticipants)
+                                        .Where(mp => mp.Teamid == tp.Teamid).Sum(mp => mp.Points),
+                                    IsEliminated = tp.IsEliminated
+                                })
+                                .OrderByDescending(x => x.TotalPoints).ToList();
+                        }
+                        <table class="table mb-0">
+                            <thead>
+                                <tr style="border-color:var(--ct-border);">
+                                    <th class="text-muted small fw-normal ps-3">#</th>
+                                    <th class="text-muted small fw-normal">Команда</th>
+                                    <th class="text-muted small fw-normal text-end pe-3">Очки</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < scoreboard.Count; i++)
+                                {
+                                    var entry = scoreboard[i];
+                                    <tr style="border-color:var(--ct-border);@(entry.IsEliminated ? "opacity:0.5;" : "")">
+                                        <td class="ps-3 text-muted">@(i + 1)</td>
+                                        <td>@if (entry.IsEliminated) {
+                                            <span>💀</span>
+                                        }
+                                        @entry.Team?.Name</td>
+                                        <td class="text-end pe-3 fw-bold" style="color:var(--ct-accent);">@entry.TotalPoints</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="col-lg-8">
+            @if (isPending)
+            {
+                <div class="card">
+                    <div class="card-body text-center py-5 text-muted">
+                        <i class="bi bi-hourglass fs-1 d-block mb-3"></i>
+                        <p>Натисніть «Розпочати турнір» щоб згенерувати перший раунд</p>
+                        <small>Команд: @Model.Tournamentparticipants.Count</small>
+                    </div>
+                </div>
+            }
+            else
+            {
+                @foreach (var roundGroup in Model.Tournamentmatches.GroupBy(m => m.Round).OrderByDescending(g => g.Key))
+                {
+                    <div class="card mb-4">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-trophy me-2"></i>Раунд @roundGroup.Key</span>
+                            <small class="text-muted">@roundGroup.Count() матчів</small>
+                        </div>
+                        <div class="card-body p-0">
+                            @foreach (var match in roundGroup.OrderBy(m => m.Id))
+                            {
+                                bool matchActive = match.Status == "active";
+                                bool matchFinished = match.Status == "finished";
+                                bool matchPlanned = match.Status == "planned";
+                                var eliminatedPlayerIds = GetEliminatedPlayerIds(match);
+
+                                <div class="p-3" style="border-bottom:1px solid var(--ct-border);">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div class="d-flex align-items-center gap-2">
+                                            @if (matchPlanned)
+                                            {
+                                                <span class="badge-planned">Заплановано</span>
+                                            }
+                                            else if (matchActive)
+                                            {
+
+                                                <span class="badge-ongoing"><i class="bi bi-circle-fill me-1" style="font-size:0.5rem;"></i>Триває</span>
+                                            }
+                                            else
+                                            {
+
+                                                <span class="badge-finished">Завершено</span>
+                                            }
+                                            @if (match.StartedAt.HasValue)
+                                            {
+                                                <small class="text-muted">@match.StartedAt.Value.ToString("HH:mm")</small>
+                                            }
+                                        </div>
+                                        @if (isActive && matchPlanned)
+                                        {
+                                            <form asp-action="StartMatch" method="post" class="d-inline">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="matchId" value="@match.Id" />
+                                                <input type="hidden" name="tournamentId" value="@Model.Id" />
+                                                <button type="submit" class="btn btn-primary btn-sm">
+                                                    <i class="bi bi-play-fill me-1"></i>Почати
+                                                </button>
+                                            </form>
+                                        }
+                                    </div>
+
+                                    @if (match.Matchparticipants.Any())
+                                    {
+                                        @if (matchActive && isActive)
+                                        {
+                                            @* ЄДИНА форма — без жодних вкладених форм *@
+                                            <form asp-action="FinishMatch" method="post">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="matchId" value="@match.Id" />
+                                                <input type="hidden" name="tournamentId" value="@Model.Id" />
+
+                                                @foreach (var mp in match.Matchparticipants)
+                                                {
+                                                    var team = mp.Team;
+                                                    bool tournamentElim = Model.Tournamentparticipants
+                                                        .FirstOrDefault(tp => tp.Teamid == mp.Teamid)?.IsEliminated ?? false;
+                                                    bool matchElim = mp.IsEliminated;
+
+                                                    <input type="hidden" name="teamIds" value="@mp.Teamid" />
+
+                                                    <div class="mb-2 rounded" style="background:rgba(255,255,255,0.03);">
+                                                        <div class="d-flex align-items-center gap-2 p-2"
+                                                             style="@(tournamentElim || matchElim ? "opacity:0.4;" : "")">
+                                                            @if (!string.IsNullOrEmpty(team?.Logourl))
+                                                            {
+                                                                <img src="@team.Logourl" class="team-logo" alt="@team.Name" />
+                                                            }
+                                                            else
+                                                            {
+
+                                                                <div class="team-logo-placeholder"><i class="bi bi-shield"></i></div>
+                                                            }
+                                                            <div class="fw-semibold flex-grow-1">
+                                                                @if (tournamentElim)
+                                                                {
+                                                                    <span title="Виключено з турніру">💀</span>
+                                                                }
+                                                                else if (matchElim)
+                                                                {
+
+                                                                    <span title="Вибув у матчі">☠</span>
+                                                                }
+                                                                @team?.Name
+                                                            </div>
+                                                            <input type="text" name="scores" value="@mp.Score"
+                                                                   class="form-control form-control-sm" style="max-width:80px;" placeholder="Рахунок" />
+                                                            @if (isBattleRoyal)
+                                                            {
+                                                                <input type="number" name="places" value="@mp.Place"
+                                                                       class="form-control form-control-sm" style="max-width:70px;" placeholder="Місце" min="1" />
+                                                            }
+                                                            else
+                                                            {
+                                                                <input type="hidden" name="places" value="0" />
+                                                            }
+                                                            @if (!isBattleRoyal)
+                                                            {
+                                                                <div class="form-check mb-0">
+                                                                    <input type="checkbox" name="winners" value="true"
+                                                                           class="form-check-input" id="winner_@mp.Id"
+                                                                    @(mp.IsWinner ? "checked" : "") />
+                                                                    <label class="form-check-label small" for="winner_@mp.Id">Переможець</label>
+                                                                </div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <input type="hidden" name="winners" value="false" />
+                                                            }
+
+                                                            @* ВИПРАВЛЕННЯ: button з onclick fetch замість вкладених форм *@
+                                                            @if (!matchElim && !tournamentElim)
+                                                            {
+                                                                <button type="button" class="btn btn-outline-warning btn-sm"
+                                                                        title="Вибути команду з матчу (тимчасово)"
+                                                                        onclick="doAction('/TournamentAdmin/MatchEliminateTeam?matchId=@match.Id&tournamentId=@Model.Id&teamId=@mp.Teamid', 'Вибути команду з матчу?')">
+                                                                    ☠ матч
+                                                                </button>
+                                                            }
+                                                            else if (matchElim)
+                                                            {
+                                                                <button type="button" class="btn btn-outline-success btn-sm"
+                                                                        title="Відновити команду в матчі"
+                                                                        onclick="doAction('/TournamentAdmin/MatchRestoreTeam?matchId=@match.Id&tournamentId=@Model.Id&teamId=@mp.Teamid')">
+                                                                    ↩
+                                                                </button>
+                                                            }
+                                                        </div>
+
+                                                        @* Гравці команди в матчі *@
+                                                        @if (!matchElim && !tournamentElim && team?.Teammembers != null && team.Teammembers.Any())
+                                                        {
+                                                            <div class="px-3 pb-2" style="border-top:1px solid var(--ct-border);">
+                                                                @foreach (var member in team.Teammembers)
+                                                                {
+                                                                    bool playerElim = eliminatedPlayerIds.Contains(member.Id);
+                                                                    <div class="d-flex align-items-center gap-2 py-1"
+                                                                         style="@(playerElim ? "opacity:0.45;" : "")">
+                                                                        <span class="small flex-grow-1" style="color:var(--ct-text);">
+                                                                            @if (playerElim)
+                                                                            {
+                                                                                <span>💀</span>
+                                                                            }
+                                                                            @member.User?.Username
+                                                                            @if (!string.IsNullOrEmpty(member.Role))
+                                                                            {
+                                                                                <span class="text-muted"> (@member.Role)</span>
+                                                                            }
+                                                                        </span>
+                                                                        @* ВИПРАВЛЕННЯ: button type=button з fetch *@
+                                                                        @if (!playerElim)
+                                                                        {
+                                                                            <button type="button" class="btn btn-outline-warning btn-sm py-0 px-1"
+                                                                                    style="font-size:0.7rem;" title="Вибути гравця з матчу"
+                                                                                    onclick="doAction('/TournamentAdmin/EliminatePlayer?tournamentId=@Model.Id&matchId=@match.Id&memberId=@member.Id&eliminated=true', 'Вибути гравця з матчу?')">
+                                                                                💀
+                                                                            </button>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <button type="button" class="btn btn-outline-success btn-sm py-0 px-1"
+                                                                                    style="font-size:0.7rem;" title="Відновити гравця"
+                                                                                    onclick="doAction('/TournamentAdmin/EliminatePlayer?tournamentId=@Model.Id&matchId=@match.Id&memberId=@member.Id&eliminated=false')">
+                                                                                ↩
+                                                                            </button>
+                                                                        }
+                                                                    </div>
+                                                                }
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                }
+
+                                                <button type="submit" class="btn btn-success btn-sm mt-2"
+                                                        onclick="return confirm('Завершити матч?')">
+                                                    <i class="bi bi-check-lg me-1"></i>Завершити матч
+                                                </button>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            @foreach (var mp in match.Matchparticipants.OrderBy(mp => mp.Place ?? 999).ThenByDescending(mp => mp.IsWinner))
+                                            {
+                                                var team = mp.Team;
+                                                <div class="d-flex align-items-center gap-2 mb-1 p-2 rounded"
+                                                     style="background:rgba(255,255,255,0.03);@(mp.IsEliminated ? "opacity:0.4;" : "")">
+                                                    @if (!string.IsNullOrEmpty(team?.Logourl))
+                                                    {
+                                                        <img src="@team.Logourl" class="team-logo" alt="@team.Name" />
+                                                    }
+                                                    else
+                                                    {
+
+                                                        <div class="team-logo-placeholder"><i class="bi bi-shield"></i></div>
+                                                    }
+                                                    <div class="fw-semibold flex-grow-1">
+                                                        @if (mp.IsEliminated)
+                                                        {
+                                                            <span>☠</span>
+                                                        }
+                                                        @team?.Name
+                                                    </div>
+                                                    @if (!string.IsNullOrEmpty(mp.Score))
+                                                    {
+                                                        <span class="badge-game">@mp.Score</span>
+                                                    }
+                                                    @if (mp.Place.HasValue)
+                                                    {
+                                                        <span class="text-muted small">#@mp.Place</span>
+                                                    }
+                                                    @if (mp.IsWinner)
+                                                    {
+                                                        <span class="badge-public"><i class="bi bi-trophy me-1"></i>Переможець</span>
+                                                    }
+                                                    @if (Model.ScoringEnabled && !isBattleRoyal && mp.Points > 0)
+                                                    {
+                                                        <span style="color:var(--ct-accent);font-weight:600;">+@mp.Points очок</span>
+                                                    }
+                                                </div>
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div class="text-muted small">Учасники не визначені</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // ===== Fetch для дій вибуття (без перезавантаження форми) =====
+                async function doAction(url, confirmMsg) {
+            if (confirmMsg && !confirm(confirmMsg)) return;
+            try {
+                // Беремо антифorgery токен з прихованого поля на сторінці
+                const token = document.querySelector('input[name="__RequestVerificationToken"]')?.value ?? '';
+                const resp = await fetch(url, {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'RequestVerificationToken': token,
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: '__RequestVerificationToken=' + encodeURIComponent(token)
+                });
+                if (resp.ok) {
+                    window.location.reload();
+                } else {
+                    alert('Помилка: ' + resp.status);
+                }
+            } catch (e) {
+                alert('Помилка з\'єднання');
+            }
+        }
+
+        // ===== Секундомір =====
+        let swSeconds = 0, swInterval = null;
+        function startStopwatch() { if (swInterval) return; swInterval = setInterval(() => { swSeconds++; document.getElementById('stopwatchDisplay').textContent = formatTime(swSeconds); }, 1000); }
+        function stopStopwatch() { clearInterval(swInterval); swInterval = null; }
+        function resetStopwatch() { stopStopwatch(); swSeconds = 0; document.getElementById('stopwatchDisplay').textContent = '00:00:00'; }
+        function formatTime(s) { const h = Math.floor(s/3600).toString().padStart(2,'0'); const m = Math.floor((s%3600)/60).toString().padStart(2,'0'); const sec = (s%60).toString().padStart(2,'0'); return `${h}:${m}:${sec}`; }
+
+        // ===== Таймер =====
+        let timerSeconds = 0, timerInterval = null;
+        function startTimer() {
+            if (timerInterval) return;
+            const minutes = parseInt(document.getElementById('timerMinutes').value) || 5;
+            if (timerSeconds === 0) timerSeconds = minutes * 60;
+            timerInterval = setInterval(() => {
+                if (timerSeconds <= 0) { clearInterval(timerInterval); timerInterval = null; document.getElementById('timerDisplay').textContent = '00:00'; document.getElementById('timerDisplay').style.color = '#ff6363'; return; }
+                timerSeconds--;
+                const m = Math.floor(timerSeconds/60).toString().padStart(2,'0');
+                const s = (timerSeconds%60).toString().padStart(2,'0');
+                document.getElementById('timerDisplay').textContent = `${m}:${s}`;
+                document.getElementById('timerDisplay').style.color = timerSeconds <= 10 ? '#ff6363' : '#ffc107';
+            }, 1000);
+        }
+        function stopTimer() { clearInterval(timerInterval); timerInterval = null; }
+        function resetTimer() { stopTimer(); timerSeconds = 0; document.getElementById('timerDisplay').textContent = '05:00'; document.getElementById('timerDisplay').style.color = '#ffc107'; }
+        document.getElementById('timerMinutes')?.addEventListener('change', function() { if (!timerInterval) { timerSeconds = 0; const m = parseInt(this.value)||5; document.getElementById('timerDisplay').textContent = `${m.toString().padStart(2,'0')}:00`; } });
+    </script>
+}

@@ -1,0 +1,69 @@
+﻿@model Custom_Tournaments.Domain.Model.Team
+
+@{
+    ViewData["Title"] = "Редагувати команду";
+}
+
+<div class="page-hero">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a asp-action="Index" class="text-muted">Команди</a></li>
+                <li class="breadcrumb-item">
+                    <a asp-action="Details" asp-route-id="@Model.Id" class="text-muted">@Model.Name</a>
+                </li>
+                <li class="breadcrumb-item active">Редагувати</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold mb-0"><i class="bi bi-pencil me-2"></i>Редагувати команду</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body p-4">
+                    <form asp-action="Edit">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="Createdat" />
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Ownerid" class="form-label">Власник</label>
+                            <select asp-for="Ownerid" class="form-select"
+                                    asp-items="ViewBag.Ownerid"></select>
+                            <span asp-validation-for="Ownerid" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Назва команди</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Logourl" class="form-label">Посилання на логотип</label>
+                            <input asp-for="Logourl" class="form-control" placeholder="https://..." />
+                            <span asp-validation-for="Logourl" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-lg me-1"></i>Зберегти
+                            </button>
+                            <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-outline-secondary">Скасувати</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

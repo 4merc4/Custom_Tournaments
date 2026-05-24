@@ -10,3 +10,4 @@ C:\Users\afoki\OneDrive\Рабочий стол\custom tournaments\src\solution\
 C:\Users\afoki\OneDrive\Рабочий стол\custom tournaments\src\solution\Custom_Tournaments\obj\Debug\net10.0\Custom_Tournaments.Domain.pdb
 C:\Users\afoki\OneDrive\Рабочий стол\custom tournaments\src\solution\Custom_Tournaments\obj\Debug\net10.0\ref\Custom_Tournaments.Domain.dll
 C:\Users\afoki\OneDrive\Рабочий стол\custom tournaments\src\solution\Custom_Tournaments\obj\Debug\net10.0\Custom_Tournaments.Domain.csproj.AssemblyReference.cache
+C:\Users\afoki\OneDrive\Рабочий стол\custom tournaments\src\solution\Custom_Tournaments\obj\Debug\net10.0\Custom_Tournaments.Domain.sourcelink.json

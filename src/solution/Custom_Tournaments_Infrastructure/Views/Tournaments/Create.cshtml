@@ -1,0 +1,236 @@
+﻿@model Custom_Tournaments.Domain.Model.Tournament
+
+@{
+    ViewData["Title"] = "Створити турнір";
+}
+
+<div class="page-hero">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a asp-action="Index" class="text-muted">Турніри</a></li>
+                <li class="breadcrumb-item active">Створити</li>
+            </ol>
+        </nav>
+        <h2 class="fw-bold mb-0"><i class="bi bi-plus-circle me-2"></i>Новий турнір</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+
+                @if (ViewBag.DebugErrors != null)
+                {
+                    <div class="alert alert-danger mb-3">@ViewBag.DebugErrors</div>
+                }
+
+                @* ===== ОСНОВНА ІНФОРМАЦІЯ ===== *@
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-info-circle me-2"></i>Основна інформація</div>
+                    <div class="card-body p-4">
+
+                        <div class="mb-3">
+                            <label asp-for="Organizerid" class="form-label">Організатор</label>
+                            <select asp-for="Organizerid" class="form-select" asp-items="ViewBag.Organizerid">
+                                <option value="">-- Оберіть організатора --</option>
+                            </select>
+                            <span asp-validation-for="Organizerid" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label">Назва турніру</label>
+                            <input asp-for="Title" class="form-control" placeholder="Введіть назву турніру" />
+                            <span asp-validation-for="Title" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Gamename" class="form-label">Гра <small class="text-muted">(необов'язково)</small></label>
+                            <input asp-for="Gamename" class="form-control" placeholder="Назва гри (напр. Dota 2, CS2, Футбол...)" />
+                            <span asp-validation-for="Gamename" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Prizepool" class="form-label">Призовий фонд (грн)</label>
+                            <input asp-for="Prizepool" class="form-control" type="number" min="0" step="0.01" placeholder="0" />
+                            <span asp-validation-for="Prizepool" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Rules" class="form-label">Правила <small class="text-muted">(необов'язково)</small></label>
+                            <textarea asp-for="Rules" class="form-control" rows="4" placeholder="Опишіть правила турніру..."></textarea>
+                            <span asp-validation-for="Rules" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-check form-switch mb-2">
+                            <input type="checkbox" name="Isprivate" value="true" class="form-check-input" role="switch" id="isprivate" />
+                            <input type="hidden" name="Isprivate" value="false" />
+                            <label class="form-check-label" for="isprivate">
+                                Приватний турнір <small class="text-muted">(не відображається у пошуку)</small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                @* ===== ФОРМАТ ТУРНІРУ ===== *@
+                <div class="card mb-4">
+                    <div class="card-header"><i class="bi bi-diagram-3 me-2"></i>Формат турніру</div>
+                    <div class="card-body p-4">
+
+                        <div class="mb-4">
+                            <label class="form-label">Тип турніру</label>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <input type="radio" name="Format" value="elimination" id="fmt_elim" class="btn-check" checked />
+                                    <label for="fmt_elim" class="btn w-100 text-start p-3"
+                                           style="background:var(--ct-card);border:1px solid var(--ct-border);border-radius:10px;">
+                                        <div class="fw-semibold mb-1"><i class="bi bi-diagram-2 me-2"></i>Олімпійська</div>
+                                        <small class="text-muted">Програв — вибув. Пари 1 на 1.</small>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="radio" name="Format" value="roundrobin" id="fmt_rr" class="btn-check" />
+                                    <label for="fmt_rr" class="btn w-100 text-start p-3"
+                                           style="background:var(--ct-card);border:1px solid var(--ct-border);border-radius:10px;">
+                                        <div class="fw-semibold mb-1"><i class="bi bi-arrow-repeat me-2"></i>Кругова</div>
+                                        <small class="text-muted">Всі грають з усіма. Рахуються очки.</small>
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="radio" name="Format" value="battleroyal" id="fmt_br" class="btn-check" />
+                                    <label for="fmt_br" class="btn w-100 text-start p-3"
+                                           style="background:var(--ct-card);border:1px solid var(--ct-border);border-radius:10px;">
+                                        <div class="fw-semibold mb-1"><i class="bi bi-bullseye me-2"></i>Королівська битва</div>
+                                        <small class="text-muted">Всі одночасно. Рейтинг за місцями.</small>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="MaxRounds" class="form-label">
+                                Максимум раундів
+                                <small class="text-muted">(для королів. битви — кількість ігор)</small>
+                            </label>
+                            <input asp-for="MaxRounds" class="form-control" type="number" min="1" max="100" value="1"
+                                   style="max-width:120px;" />
+                            <span asp-validation-for="MaxRounds" class="text-danger small"></span>
+                        </div>
+                    </div>
+                </div>
+
+                @* ===== БАЛОВА СИСТЕМА ===== *@
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-star me-2"></i>Балова система</span>
+                            <div class="form-check form-switch mb-0">
+                                <input type="checkbox" name="ScoringEnabled" value="true"
+                                       class="form-check-input" role="switch"
+                                       id="scoringToggle" onchange="toggleScoring(this)" />
+                                <input type="hidden" name="ScoringEnabled" value="false" />
+                                <label class="form-check-label" for="scoringToggle">Увімкнути</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4" id="scoringPanel" style="display:none;">
+                        <p class="text-muted small mb-3">Скільки очок нараховується за кожен результат матчу</p>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label asp-for="ScoringWin" class="form-label">
+                                    <span style="color:#63ffb4;">●</span> Перемога
+                                </label>
+                                <input asp-for="ScoringWin" class="form-control" type="number" min="0" max="100" value="3" />
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="ScoringDraw" class="form-label">
+                                    <span style="color:#ffc107;">●</span> Нічия
+                                </label>
+                                <input asp-for="ScoringDraw" class="form-control" type="number" min="0" max="100" value="1" />
+                            </div>
+                            <div class="col-md-4">
+                                <label asp-for="ScoringLoss" class="form-label">
+                                    <span style="color:#ff6363;">●</span> Поразка
+                                </label>
+                                <input asp-for="ScoringLoss" class="form-control" type="number" min="0" max="100" value="0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @* ===== КНОПКИ ===== *@
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-lg me-1"></i>Створити турнір
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary">Скасувати</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+
+
+    <script>
+        function toggleScoring(checkbox) {
+            document.getElementById('scoringPanel').style.display = checkbox.checked ? 'block' : 'none';
+        }
+
+        // Підсвітка вибраного формату
+        document.querySelectorAll('.btn-check').forEach(radio => {
+            radio.addEventListener('change', function () {
+                document.querySelectorAll('label.btn').forEach(l => {
+                    l.style.borderColor = 'var(--ct-border)';
+                });
+                if (this.checked) {
+                    document.querySelector(`label[for="${this.id}"]`).style.borderColor = 'var(--ct-accent)';
+                }
+            });
+        });
+        // Початкова підсвітка
+        document.querySelector('.btn-check:checked') &&
+            (document.querySelector(`label[for="${document.querySelector('.btn-check:checked').id}"]`).style.borderColor = 'var(--ct-accent)');
+
+
+                    // Блокування балової системи для battleroyal
+        function handleFormatChange() {
+            const isBattleRoyal = document.querySelector('input[name="Format"]:checked')?.value === 'battleroyal';
+            const scoringToggle = document.getElementById('scoringToggle');
+            const scoringPanel = document.getElementById('scoringPanel');
+    
+            if (isBattleRoyal) {
+                scoringToggle.checked = false;
+                scoringToggle.disabled = true;
+                scoringPanel.style.display = 'none';
+                scoringToggle.closest('.card').style.opacity = '0.5';
+            } else {
+                scoringToggle.disabled = false;
+                scoringToggle.closest('.card').style.opacity = '1';
+            }
+        }
+
+        // Додай виклик в існуючий обробник .btn-check
+        document.querySelectorAll('.btn-check').forEach(radio => {
+            radio.addEventListener('change', function () {
+                document.querySelectorAll('label.btn').forEach(l => l.style.borderColor = 'var(--ct-border)');
+                if (this.checked)
+                    document.querySelector(`label[for="${this.id}"]`).style.borderColor = 'var(--ct-accent)';
+                handleFormatChange(); // додай цей рядок
+            });
+        });
+
+        // Перевірка при завантаженні сторінки
+        handleFormatChange();
+    </script>
+}

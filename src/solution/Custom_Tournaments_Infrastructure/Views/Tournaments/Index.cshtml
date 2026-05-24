@@ -1,0 +1,170 @@
+﻿@model IEnumerable<Custom_Tournaments.Domain.Model.Tournament>
+
+@{
+    ViewData["Title"] = "Турніри";
+    bool showFinished = ViewData["showFinished"] is bool sf && sf;
+}
+
+<div class="page-hero">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2 class="fw-bold mb-1"><i class="bi bi-trophy me-2"></i>Турніри</h2>
+                <p class="text-muted mb-0">Знайдено: @Model.Count() турнірів</p>
+            </div>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-action="Create" class="btn btn-primary">
+                    <i class="bi bi-plus-lg me-1"></i>Створити турнір
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    @* Фільтри *@
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Index">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-4">
+                        <label class="form-label small text-muted">Назва турніру</label>
+                        <input type="text" name="searchTitle" value="@ViewData["searchTitle"]"
+                               class="form-control" placeholder="Пошук за назвою..." />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label small text-muted">Гра</label>
+                        <input type="text" name="searchGame" value="@ViewData["searchGame"]"
+                               class="form-control" placeholder="Назва гри..." />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label small text-muted">Призовий від</label>
+                        <input type="number" name="minPrize" value="@ViewData["minPrize"]"
+                               class="form-control" placeholder="0" min="0" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label small text-muted">Призовий до</label>
+                        <input type="number" name="maxPrize" value="@ViewData["maxPrize"]"
+                               class="form-control" placeholder="∞" min="0" />
+                    </div>
+                    <div class="col-md-1">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-2 d-flex align-items-center gap-3">
+                    <div class="form-check">
+                        <input type="checkbox" name="showFinished" value="true"
+                               class="form-check-input" id="showFinished"
+                        @(showFinished ? "checked" : "")
+                               onchange="this.form.submit()" />
+                        <label class="form-check-label small" for="showFinished">
+                            Показати завершені
+                        </label>
+                    </div>
+                    @if (ViewData["searchTitle"] != null || ViewData["searchGame"] != null ||
+                         ViewData["minPrize"] != null || ViewData["maxPrize"] != null || showFinished)
+                    {
+                        <a asp-action="Index" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-x-circle me-1"></i>Скинути фільтри
+                        </a>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5 text-muted">
+            <i class="bi bi-search fs-1 d-block mb-3"></i>
+            <p>Турнірів не знайдено</p>
+        </div>
+    }
+    else
+    {
+        <div class="row g-3">
+            @foreach (var tournament in Model)
+            {
+                string statusBadge = tournament.Status switch
+                {
+                    "active" => "badge-ongoing",
+                    "finished" => "badge-finished",
+                    _ => ""
+                };
+                string statusLabel = tournament.Status switch
+                {
+                    "active" => "Активний",
+                    "finished" => "Завершений",
+                    _ => ""
+                };
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h6 class="card-title mb-0 fw-semibold">@tournament.Title</h6>
+                                <div class="d-flex gap-1 flex-shrink-0 ms-2">
+                                    @if (!string.IsNullOrEmpty(statusLabel))
+                                    {
+                                        <span class="@statusBadge">@statusLabel</span>
+                                    }
+                                    @if (tournament.Isprivate == true)
+                                    {
+                                        <span class="badge-private"><i class="bi bi-lock-fill me-1"></i>Приватний</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-public">Публічний</span>
+                                    }
+                                </div>
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(tournament.Gamename))
+                            {
+                                <div class="mb-2">
+                                    <span class="badge-game"><i class="bi bi-controller me-1"></i>@tournament.Gamename</span>
+                                </div>
+                            }
+
+                            <div class="text-muted small mb-2">
+                                <i class="bi bi-person me-1"></i>@tournament.Organizer?.Username
+                            </div>
+
+                            @if (tournament.Prizepool.HasValue && tournament.Prizepool > 0)
+                            {
+                                <div class="text-muted small mb-2">
+                                    <i class="bi bi-cash me-1"></i>Призовий фонд:
+                                    <strong class="text-warning">@tournament.Prizepool.Value.ToString("N0") грн</strong>
+                                </div>
+                            }
+
+                            <div class="text-muted small mb-3">
+                                <i class="bi bi-people me-1"></i>Команд: @tournament.Tournamentparticipants.Count
+                            </div>
+
+                            <div class="mt-auto d-flex gap-2">
+                                <a asp-action="Details" asp-route-id="@tournament.Id"
+                                   class="btn btn-outline-primary btn-sm flex-grow-1">Детальніше</a>
+                                @* Кнопки редагування/видалення тільки для авторизованих *@
+                                @if (User.Identity?.IsAuthenticated == true && tournament.Status == "pending")
+                                {
+                                    <a asp-action="Edit" asp-route-id="@tournament.Id"
+                                           class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@tournament.Id"
+                                           class="btn btn-outline-danger btn-sm">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,45 @@
+﻿@model Custom_Tournaments.Domain.Model.Team
+
+@{
+    ViewData["Title"] = "Видалити команду";
+}
+
+<div class="page-hero">
+    <div class="container">
+        <h2 class="fw-bold mb-0 text-danger"><i class="bi bi-trash me-2"></i>Видалити команду</h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card" style="border-color: rgba(255,99,99,0.4) !important;">
+                <div class="card-body p-4 text-center">
+                    <i class="bi bi-exclamation-triangle-fill text-danger fs-1 mb-3 d-block"></i>
+                    <h5 class="mb-1">Ви впевнені?</h5>
+                    <p class="text-muted mb-3">
+                        Команда <strong>«@Model.Name»</strong> та всі пов'язані дані будуть видалені назавжди.
+                    </p>
+
+                    <dl class="text-start mb-4">
+                        <dt class="text-muted small">Власник</dt>
+                        <dd>@Model.Owner?.Username</dd>
+                        <dt class="text-muted small">Дата створення</dt>
+                        <dd>@Model.Createdat?.ToString("dd.MM.yyyy")</dd>
+                    </dl>
+
+                    <div class="d-flex gap-2 justify-content-center">
+                        <form asp-action="Delete">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" asp-for="Id" />
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash me-1"></i>Так, видалити
+                            </button>
+                        </form>
+                        <a asp-action="Index" class="btn btn-outline-secondary">Скасувати</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

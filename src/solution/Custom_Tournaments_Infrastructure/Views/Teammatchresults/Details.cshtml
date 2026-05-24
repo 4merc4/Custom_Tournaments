@@ -1,0 +1,146 @@
+﻿@model Custom_Tournaments.Domain.Model.Teammatchresult
+
+@{
+    ViewData["Title"] = "Результат матчу";
+    string statusLabel = Model.Status switch
+    {
+        "planned" => "Заплановано",
+        "ongoing" => "Триває",
+        "finished" => "Завершено",
+        _ => Model.Status
+    };
+    string statusBadge = Model.Status switch
+    {
+        "planned" => "badge-planned",
+        "ongoing" => "badge-ongoing",
+        "finished" => "badge-finished",
+        _ => "badge-game"
+    };
+}
+
+<div class="page-hero">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item">
+                    <a asp-controller="Teams" asp-action="Index" class="text-muted">Команди</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a asp-controller="Teams" asp-action="Details" asp-route-id="@Model.Teamid" class="text-muted">
+                        @Model.Team?.Name
+                    </a>
+                </li>
+                <li class="breadcrumb-item active">Матч</li>
+            </ol>
+        </nav>
+        <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <h2 class="fw-bold mb-0">
+                        <i class="bi bi-controller me-2"></i>@Model.Gamename
+                    </h2>
+                    <span class="@statusBadge">@statusLabel</span>
+                </div>
+                <p class="text-muted mb-0">
+                    Команда: <strong style="color:var(--ct-text)">@Model.Team?.Name</strong>
+                    @if (Model.Tournament != null)
+                    {
+                        <span class="ms-3">Турнір: <strong style="color:var(--ct-text)">@Model.Tournament.Title</strong></span>
+                    }
+                </p>
+            </div>
+            @if (User.Identity?.IsAuthenticated == true && Model.Status != "finished")
+            {
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-pencil me-1"></i>Редагувати
+                </a>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row g-4">
+        @* Основна інформація *@
+        <div class="col-lg-4">
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="bi bi-info-circle me-2"></i>Деталі матчу
+                </div>
+                <div class="card-body">
+                    <dl class="mb-0">
+                        <dt class="text-muted small">Гра</dt>
+                        <dd class="mb-3">@Model.Gamename</dd>
+
+                        @if (!string.IsNullOrEmpty(Model.Score))
+                        {
+                            <dt class="text-muted small">Рахунок</dt>
+                            <dd class="mb-3">
+                                <span class="fw-bold fs-4" style="color: var(--ct-accent);">@Model.Score</span>
+                            </dd>
+                        }
+
+                        @if (!string.IsNullOrEmpty(Model.Result))
+                        {
+                            <dt class="text-muted small">Результат</dt>
+                            <dd class="mb-3">
+                                @if (Model.Result.ToLower() == "win" || Model.Result.ToLower() == "перемога")
+                                {
+                                    <span class="badge-public"><i class="bi bi-trophy me-1"></i>Перемога</span>
+                                }
+                                else if (Model.Result.ToLower() == "loss" || Model.Result.ToLower() == "поразка")
+                                {
+                                    <span class="badge-private"><i class="bi bi-x-circle me-1"></i>Поразка</span>
+                                }
+                                else if (Model.Result.ToLower() == "draw" || Model.Result.ToLower() == "нічия")
+                                {
+                                    <span class="badge-planned"><i class="bi bi-dash-circle me-1"></i>Нічия</span>
+                                }
+                                else
+                                {
+                                    <span class="badge-game">@Model.Result</span>
+                                }
+                            </dd>
+                        }
+
+                        @if (!string.IsNullOrEmpty(Model.Duration))
+                        {
+                            <dt class="text-muted small">Тривалість</dt>
+                            <dd class="mb-3"><i class="bi bi-clock me-1"></i>@Model.Duration</dd>
+                        }
+
+                        @if (Model.Playedat.HasValue)
+                        {
+                            <dt class="text-muted small">Дата</dt>
+                            <dd class="mb-0">@Model.Playedat.Value.ToString("dd.MM.yyyy HH:mm")</dd>
+                        }
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        @* Статистика *@
+        <div class="col-lg-8">
+            @if (!string.IsNullOrEmpty(Model.Gamestats))
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <i class="bi bi-bar-chart me-2"></i>Статистика
+                    </div>
+                    <div class="card-body">
+                        <pre style="color: var(--ct-text); background: transparent; font-size: 0.85rem;">@Model.Gamestats</pre>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="card">
+                    <div class="card-body text-center py-5 text-muted">
+                        <i class="bi bi-bar-chart fs-1 d-block mb-3"></i>
+                        <p>Детальна статистика відсутня</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

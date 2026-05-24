@@ -6,14 +6,13 @@ namespace Custom_Tournaments.Domain.Model;
 public partial class User : Entity
 {
     
+    public string? IdentityUserId { get; set; }
 
+    
     public string Username { get; set; } = null!;
 
+    
     public string Email { get; set; } = null!;
-
-    public string Passwordhash { get; set; } = null!;
-
-    public string? Avatarurl { get; set; }
 
     public DateTime? Createdat { get; set; }
 

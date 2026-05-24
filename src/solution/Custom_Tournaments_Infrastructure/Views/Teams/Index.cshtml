@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Custom_Tournaments.Domain.Model.Team>
+
+@{
+    ViewData["Title"] = "Команди";
+}
+
+<div class="page-hero">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2 class="fw-bold mb-1"><i class="bi bi-people me-2"></i>Команди</h2>
+                <p class="text-muted mb-0">Знайдено: @Model.Count() команд</p>
+            </div>
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i>Створити команду
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    @* Фільтри *@
+    <div class="card mb-4">
+        <div class="card-body">
+            <form method="get" asp-action="Index">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-5">
+                        <label class="form-label small text-muted">Назва команди</label>
+                        <input type="text" name="searchName" value="@ViewData["searchName"]"
+                               class="form-control" placeholder="Пошук за назвою..." />
+                    </div>
+                    <div class="col-md-5">
+                        <label class="form-label small text-muted">Псевдонім учасника</label>
+                        <input type="text" name="searchMember" value="@ViewData["searchMember"]"
+                               class="form-control" placeholder="Ім'я або нікнейм..." />
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-search me-1"></i>Знайти
+                        </button>
+                    </div>
+                </div>
+                @if (ViewData["searchName"] != null || ViewData["searchMember"] != null)
+                {
+                    <div class="mt-2">
+                        <a asp-action="Index" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-x-circle me-1"></i>Скинути фільтри
+                        </a>
+                    </div>
+                }
+            </form>
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5 text-muted">
+            <i class="bi bi-people fs-1 d-block mb-3"></i>
+            <p>Команд не знайдено</p>
+        </div>
+    }
+    else
+    {
+        <div class="row g-3">
+            @foreach (var team in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                @if (!string.IsNullOrEmpty(team.Logourl))
+                                {
+                                    <img src="@team.Logourl" alt="@team.Name" class="team-logo" />
+                                }
+                                else
+                                {
+                                    <div class="team-logo-placeholder">
+                                        <i class="bi bi-shield"></i>
+                                    </div>
+                                }
+                                <div>
+                                    <h6 class="mb-0 fw-semibold" style="color: var(--ct-text);">@team.Name</h6>
+                                    <small class="text-muted">@team.Owner?.Username</small>
+                                </div>
+                            </div>
+
+                            <div class="mb-2" style="color: var(--ct-muted); font-size: 0.875rem;">
+                                <i class="bi bi-people me-1"></i>Учасників: @team.Teammembers.Count
+                            </div>
+
+                            @if (team.Teammembers.Any())
+                            {
+                                <div class="mb-3">
+                                    @foreach (var member in team.Teammembers.Take(3))
+                                    {
+                                        <span class="badge me-1 mb-1"
+                                              style="background-color:var(--ct-border);color:var(--ct-text);">
+                                            @member.User?.Username
+                                        </span>
+                                    }
+                                    @if (team.Teammembers.Count > 3)
+                                    {
+                                        <span style="color: var(--ct-muted); font-size:0.8rem;">+@(team.Teammembers.Count - 3) ще</span>
+                                    }
+                                </div>
+                            }
+
+                            <div class="mt-auto d-flex gap-2">
+                                <a asp-action="Details" asp-route-id="@team.Id"
+                                   class="btn btn-outline-primary btn-sm flex-grow-1">Детальніше</a>
+                                <a asp-action="Edit" asp-route-id="@team.Id"
+                                   class="btn btn-outline-secondary btn-sm"><i class="bi bi-pencil"></i></a>
+                                <a asp-action="Delete" asp-route-id="@team.Id"
+                                   class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
